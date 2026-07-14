@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
@@ -84,12 +85,6 @@
       <a class="btn btn-line" href="https://line.me/R/ti/p/@ykp4927u" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.02 3.55 7.39 8.35 8.03.33.07.77.22.88.5.1.26.07.66.03.92l-.14.85c-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.92C21.5 13.4 22 11.83 22 10.13 22 5.64 17.52 2 12 2z"/></svg>
         LINE 洽詢
-      </a>
-      <button class="btn btn-wechat" onclick="copyWechat()">
-微信 ID：wandfor57（點擊複製）
-</button>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 4C5.36 4 2 6.9 2 10.5c0 2 1.05 3.77 2.7 4.95l-.68 2.05 2.38-1.19c.66.18 1.36.29 2.1.29.18 0 .35-.01.53-.02-.21-.6-.33-1.24-.33-1.9 0-3.31 3.13-6 7-6 .23 0 .46.01.68.03C15.7 6.09 12.86 4 9.5 4zm-2.75 3.5a1 1 0 110 2 1 1 0 010-2zm5.5 0a1 1 0 110 2 1 1 0 010-2zM15.7 9.7c-3.47 0-6.3 2.34-6.3 5.22 0 2.88 2.83 5.22 6.3 5.22.6 0 1.19-.08 1.74-.21l2.06 1.03-.58-1.76c1.42-.96 2.38-2.47 2.38-4.28 0-2.88-2.82-5.22-6.3-5.22zm-2.3 3.1a.9.9 0 110 1.8.9.9 0 010-1.8zm4.6 0a.9.9 0 110 1.8.9.9 0 010-1.8z"/></svg>
-        微信洽詢
       </a>
     </div>
     <figure class="hero-figure reveal">
@@ -220,24 +215,13 @@
     <h2 class="gold">官方聯繫</h2>
     <div class="contact-grid">
       <div class="contact-card">
-    <img src="images/wechat-qr.png" alt="微信 QR Code">
-
-    <span class="contact-label">
-        微信 ID：wandfor57
-    </span>
-
-    <button class="btn btn-solid" onclick="copyWechat()">
-        點擊複製微信 ID
-    </button>
-
-    <span class="contact-hint">
-        開啟微信後搜尋 wandfor57
-    </span>
-</div> target="_blank" rel="noopener">
-        <img src="images/wechat-qr.png" alt="微信 WeChat 官方帳號 QR Code" width="236" height="232" loading="lazy">
+        <img src="images/wechat-qr.png" alt="微信 WeChat 官方帳號 QR Code（微信 ID：wandfor57）" width="236" height="232" loading="lazy">
         <span class="contact-label">加微信 &raquo;</span>
-        <span class="contact-hint">掃描或點擊加入</span>
-      </a>
+        <span class="contact-hint">掃描 QR Code 加入</span>
+        <button type="button" class="wechat-copy" id="wechatCopy" data-wxid="wandfor57" aria-label="複製微信 ID wandfor57">
+          微信 ID：<strong>wandfor57</strong><span class="copy-tag">複製</span>
+        </button>
+      </div>
       <a class="contact-card" href="https://line.me/R/ti/p/@ykp4927u" target="_blank" rel="noopener">
         <img src="images/line-logo.gif" alt="LINE 官方帳號 @ykp4927u" width="300" height="300" loading="lazy">
         <span class="contact-label">加LINE &raquo;</span>
@@ -259,10 +243,6 @@
 <div class="float-btns">
   <a class="float-btn fb-line" href="https://line.me/R/ti/p/@ykp4927u" target="_blank" rel="noopener" aria-label="加LINE洽詢">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.02 3.55 7.39 8.35 8.03.33.07.77.22.88.5.1.26.07.66.03.92l-.14.85c-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.92C21.5 13.4 22 11.83 22 10.13 22 5.64 17.52 2 12 2z"/></svg>
-  </a>
-  <button class="float-btn fb-wechat"
-onclick="copyWechat()"> target="_blank" rel="noopener" aria-label="加微信洽詢">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 4C5.36 4 2 6.9 2 10.5c0 2 1.05 3.77 2.7 4.95l-.68 2.05 2.38-1.19c.66.18 1.36.29 2.1.29.18 0 .35-.01.53-.02-.21-.6-.33-1.24-.33-1.9 0-3.31 3.13-6 7-6 .23 0 .46.01.68.03C15.7 6.09 12.86 4 9.5 4zm-2.75 3.5a1 1 0 110 2 1 1 0 010-2zm5.5 0a1 1 0 110 2 1 1 0 010-2zM15.7 9.7c-3.47 0-6.3 2.34-6.3 5.22 0 2.88 2.83 5.22 6.3 5.22.6 0 1.19-.08 1.74-.21l2.06 1.03-.58-1.76c1.42-.96 2.38-2.47 2.38-4.28 0-2.88-2.82-5.22-6.3-5.22zm-2.3 3.1a.9.9 0 110 1.8.9.9 0 010-1.8zm4.6 0a.9.9 0 110 1.8.9.9 0 010-1.8z"/></svg>
   </a>
   <button class="float-btn fb-top" id="backTop" aria-label="回到頂端" hidden>
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7 1.4 1.4L11 8.8V19h2V8.8l4.6 4.6L19 12z"/></svg>
