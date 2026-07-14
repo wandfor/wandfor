@@ -118,8 +118,21 @@ a:hover { color: var(--gold-bright); }
 .btn-line { background: #06c755; color: #fff; }
 .btn-line:hover { background: #05a648; color: #fff; }
 
-.btn-wechat { background: #07c160; color: #fff; }
-.btn-wechat:hover { background: #06a552; color: #fff; }
+.wechat-copy {
+  margin-top: 6px; padding: 8px 16px;
+  font-family: var(--sans); font-size: .92rem; color: var(--ink);
+  background: #fff; border: 1.5px dashed var(--gold);
+  border-radius: 6px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: border-color .25s, background-color .25s;
+}
+.wechat-copy:hover { border-style: solid; background: var(--paper-soft); }
+.wechat-copy strong { letter-spacing: .04em; }
+.copy-tag {
+  font-size: .75rem; color: #fff; background: #07c160;
+  border-radius: 4px; padding: 2px 8px;
+}
+.wechat-copy.copied .copy-tag { background: var(--purple); }
 
 /* ---------- 分隔線 ---------- */
 .divider { width: min(100%, var(--maxw)); padding: 0 16px; margin: 36px auto; }
@@ -243,7 +256,6 @@ a:hover { color: var(--gold-bright); }
 .float-btn:hover { transform: scale(1.08); }
 .float-btn svg { width: 28px; height: 28px; fill: #fff; }
 .fb-line { background: #06c755; }
-.fb-wechat { background: #07c160; }
 .fb-top { background: var(--gold); }
 .fb-top[hidden] { display: none; }
 
